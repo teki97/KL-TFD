@@ -1,6 +1,6 @@
 # Kernel_learning_distribution
 ## Introduction
-
+Kernel Learning for High Resolution Time-Frequency Distribution
 ## Preparation
 - python 3.6
 - pytorch 0.4.1
