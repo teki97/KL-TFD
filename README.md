@@ -9,4 +9,4 @@ Kernel Learning for High Resolution Time-Frequency Distribution
 ## Contributing Guideline
 We would like to thank the authors in these works for sharing the source codes of these methods, which are publicly released at https://github.com/Prof-Boualem-Boashash/TFSAP-7.1-software-package and https://github.com/mokhtarmohammadi/Locally-Optimized-ADTFD.
 ## Contact
-This repo is currently maintained by Lei Jiang (@teki97).
+This repo is currently maintained by Lei Jiang (teki97@whu.edu.cn).
