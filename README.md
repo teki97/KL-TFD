@@ -1,7 +1,7 @@
 # Kernel_learning_distribution
 ## Introduction
 Kernel Learning for High Resolution Time-Frequency Distribution
-![]https://github.com/teki97/Kernel_learning_distribution/blob/master/Eqn1.pdf
+![](https://github.com/teki97/Kernel_learning_distribution/blob/master/Eqn1.pdf)
 ## Preparation
 - python 3.6
 - pytorch 0.4.1
