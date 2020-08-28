@@ -1,8 +1,8 @@
 # Kernel_learning_distribution
 ## Supplement
 In this paper, the first synthetic test data is composed of the following two spectrally-overlapped components:  
-![](https://github.com/teki97/Kernel_learning_distribution/blob/master/Eqn1.png)
-where ![](https://github.com/teki97/Kernel_learning_distribution/blob/master/Eqn3.png) is an Gaussian AM function, $t_0$ equals to 128.
+![](https://github.com/teki97/Kernel_learning_distribution/blob/master/Eqn1.png)  
+where $a(t)=\exp\big(-(0.005t-0.667)^{2}\pi\big)$ is an Gaussian AM function, $t_0$ equals to 128.
 ## Preparation
 - python 3.6
 - pytorch 0.4.1
