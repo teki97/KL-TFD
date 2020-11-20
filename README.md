@@ -67,7 +67,7 @@ The evaluation results measured by l1 distance for the first synthetic signal (t
 </tr>
 <tr>
   <td align="left">0 dB</td>
-  td align="center">3.70</td>
+  <td align="center">3.70</td>
   <td align="center">1.78</td>
   <td align="center">1.77</td>
   <td align="center">1.66</td>
