@@ -95,57 +95,57 @@ Then, when we train our network using signals at SNR = 5 dB, the evaluation resu
 </tr>
 <tr>
    <td align="left">45 dB</td>
-  <td align="center">3.05</td>
-  <td align="center">1.49</td>
-  <td align="center">1.44</td>
-  <td align="center">1.40</td>
-  <td align="center">1.36</td>
-  <td align="center">1.32</td>
+  <td align="center">3.75</td>
+  <td align="center">1.38</td>
+  <td align="center">1.22</td>
+  <td align="center">1.15</td>
+  <td align="center">1.08</td>
+  <td align="center">1.03</td>
 </tr>
 <tr>
   <td align="left">35 dB</td>
-  <td align="center">3.05</td>
-  <td align="center">1.49</td>
-  <td align="center">1.44</td>
-  <td align="center">1.40</td>
-  <td align="center">1.36</td>
-  <td align="center">1.32</td>
+  <td align="center">3.75</td>
+  <td align="center">1.38</td>
+  <td align="center">1.22</td>
+  <td align="center">1.15</td>
+  <td align="center">1.08</td>
+  <td align="center">1.03</td>
 </tr>
 <tr>
   <td align="left">25 dB</td>
-  <td align="center">3.05</td>
-  <td align="center">1.50</td>
-  <td align="center">1.43</td>
-  <td align="center">1.40</td>
-  <td align="center">1.36</td>
-  <td align="center">1.33</td>
+  <td align="center">3.75</td>
+  <td align="center">1.38</td>
+  <td align="center">1.22</td>
+  <td align="center">1.15</td>
+  <td align="center">1.09</td>
+  <td align="center">1.03</td>
 </tr>
 <tr>
   <td align="left">15 dB</td>
-  <td align="center">3.04</td>
-  <td align="center">1.53</td>
-  <td align="center">1.44</td>
-  <td align="center">1.40</td>
-  <td align="center">1.37</td>
-  <td align="center">1.35</td>
+  <td align="center">3.76</td>
+  <td align="center">1.41</td>
+  <td align="center">1.25</td>
+  <td align="center">1.19</td>
+  <td align="center">1.11</td>
+  <td align="center">1.05</td>
 </tr>
 <tr>
   <td align="left">5 dB</td>
-  <td align="center">3.19</td>
-  <td align="center">1.64</td>
-  <td align="center">1.61</td>
-  <td align="center">1.53</td>
-  <td align="center">1.53</td>
-  <td align="center">1.50</td>
+  <td align="center">3.91</td>
+  <td align="center">1.54</td>
+  <td align="center">1.43</td>
+  <td align="center">1.35</td>
+  <td align="center">1.25</td>
+  <td align="center">1.23</td>
 </tr>
 <tr>
   <td align="left">0 dB</td>
-  <td align="center">3.70</td>
-  <td align="center">1.78</td>
-  <td align="center">1.77</td>
-  <td align="center">1.66</td>
+  <td align="center">4.37</td>
   <td align="center">1.62</td>
-  <td align="center">1.61</td>
+  <td align="center">1.58</td>
+  <td align="center">1.52</td>
+  <td align="center">1.45</td>
+  <td align="center">1.49</td>
 </tr>
 </table>
       </td>
@@ -162,57 +162,57 @@ Then, when we train our network using signals at SNR = 5 dB, the evaluation resu
 </tr>
 <tr>
    <td align="left">45 dB</td>
-  <td align="center">3.05</td>
-  <td align="center">1.49</td>
-  <td align="center">1.44</td>
-  <td align="center">1.40</td>
-  <td align="center">1.36</td>
-  <td align="center">1.32</td>
+  <td align="center">11.98</td>
+  <td align="center">10.71</td>
+  <td align="center">10.63</td>
+  <td align="center">10.42</td>
+  <td align="center">10.17</td>
+  <td align="center">10.16</td>
 </tr>
 <tr>
   <td align="left">35 dB</td>
-  <td align="center">3.05</td>
-  <td align="center">1.49</td>
-  <td align="center">1.44</td>
-  <td align="center">1.40</td>
-  <td align="center">1.36</td>
-  <td align="center">1.32</td>
+  <td align="center">11.98</td>
+  <td align="center">10.71</td>
+  <td align="center">10.63</td>
+  <td align="center">10.42</td>
+  <td align="center">10.17</td>
+  <td align="center">10.16</td>
 </tr>
 <tr>
   <td align="left">25 dB</td>
-  <td align="center">3.05</td>
-  <td align="center">1.50</td>
-  <td align="center">1.43</td>
-  <td align="center">1.40</td>
-  <td align="center">1.36</td>
-  <td align="center">1.33</td>
+  <td align="center">11.98</td>
+  <td align="center">10.71</td>
+  <td align="center">10.63</td>
+  <td align="center">10.41</td>
+  <td align="center">10.17</td>
+  <td align="center">10.16</td>
 </tr>
 <tr>
   <td align="left">15 dB</td>
-  <td align="center">3.04</td>
-  <td align="center">1.53</td>
-  <td align="center">1.44</td>
-  <td align="center">1.40</td>
-  <td align="center">1.37</td>
-  <td align="center">1.35</td>
+  <td align="center">11.98</td>
+  <td align="center">10.70</td>
+  <td align="center">10.60</td>
+  <td align="center">10.40</td>
+  <td align="center">10.16</td>
+  <td align="center">10.16</td>
 </tr>
 <tr>
   <td align="left">5 dB</td>
-  <td align="center">3.19</td>
-  <td align="center">1.64</td>
-  <td align="center">1.61</td>
-  <td align="center">1.53</td>
-  <td align="center">1.53</td>
-  <td align="center">1.50</td>
+  <td align="center">12.03</td>
+  <td align="center">10.50</td>
+  <td align="center">10.36</td>
+  <td align="center">10.36</td>
+  <td align="center">10.34</td>
+  <td align="center">10.44</td>
 </tr>
 <tr>
   <td align="left">0 dB</td>
-  <td align="center">3.70</td>
-  <td align="center">1.78</td>
-  <td align="center">1.77</td>
-  <td align="center">1.66</td>
-  <td align="center">1.62</td>
-  <td align="center">1.61</td>
+  <td align="center">12.30</td>
+  <td align="center">10.47</td>
+  <td align="center">10.33</td>
+  <td align="center">10.48</td>
+  <td align="center">10.48</td>
+  <td align="center">10.65</td>
 </tr>
 </table>
       </td>
