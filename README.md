@@ -1,5 +1,5 @@
 # Kernel Learning for High-Resolution Time-frequency Distribution
-We provide a pytorch implementation of the paper: Kernel Learning for High-Resolution Time-frequency Distribution [1], where a kernel learning based TFD model is proposed to gain high resolution and CT-free TFDs. The proposed model includes two kinds of multi-channel learning covolutional kernels stacked, that is, normal 2D Conv block and Skipping 2D Conv Block. Specifically, the former has large kernel size so that a smooth TFD can be attained while the latter has small kernel size with BAM [2] to improve resolution. Six pre-trained networks are provided, and they are corresponding to six cases of various Q (0, 1, 2, 3, 4, 5) which is the number of skipping 2D Conv Blocks.
+We provide a pytorch implementation of the paper: Kernel Learning for High-Resolution Time-frequency Distribution [1], where a kernel learning based TFD model is proposed to gain high resolution and CT-free TFDs. The proposed model includes two kinds of multi-channel learning covolutional kernels stacked, that is, normal 2D Conv block and Skipping 2D Conv Block. Specifically, the former has large kernel size so that a smooth TFD can be attained while the latter has small kernel size with BAM [2] to improve resolution. Six pre-trained networks are provided (training signals at SNR = 10 dB), and they are corresponding to six cases of various Q (0, 1, 2, 3, 4, 5) which is the number of skipping 2D Conv Blocks. Additionally, we also train our network using synthetic data at SNR = 5 dB, and it is examined that performance with low SNR can be improved while weak energy parts are prone to be ignored.
 
 ## Preparation
 - python 3.6
@@ -78,6 +78,148 @@ The evaluation results measured by l1 distance for the first synthetic signal (t
 
 The visualized experimental results are supplemented as follows:  
 ![](https://github.com/teki97/kernel-learning-time-frequency-distribution/blob/main/supplemet_1.jpg)
+
+Then, when we train our network using signals at SNR = 5 dB, the evaluation results measured by l1 distance for the second synthetic signal (three-component synthetic signal in our paper) and the evaluation results measured by Renyi Entropy for the real-world bat echolocation signal are shown in the following tables:
+<table>
+  <tr>
+    <td>
+    <table>
+<tr>
+  <td align="left">SNR</td>
+  <td align="center">Q=0</td>
+  <td align="center">Q=1</td>
+  <td align="center">Q=2</td>
+  <td align="center">Q=3</td>
+  <td align="center">Q=4</td>
+  <td align="center">Q=5</td>
+</tr>
+<tr>
+   <td align="left">45 dB</td>
+  <td align="center">3.05</td>
+  <td align="center">1.49</td>
+  <td align="center">1.44</td>
+  <td align="center">1.40</td>
+  <td align="center">1.36</td>
+  <td align="center">1.32</td>
+</tr>
+<tr>
+  <td align="left">35 dB</td>
+  <td align="center">3.05</td>
+  <td align="center">1.49</td>
+  <td align="center">1.44</td>
+  <td align="center">1.40</td>
+  <td align="center">1.36</td>
+  <td align="center">1.32</td>
+</tr>
+<tr>
+  <td align="left">25 dB</td>
+  <td align="center">3.05</td>
+  <td align="center">1.50</td>
+  <td align="center">1.43</td>
+  <td align="center">1.40</td>
+  <td align="center">1.36</td>
+  <td align="center">1.33</td>
+</tr>
+<tr>
+  <td align="left">15 dB</td>
+  <td align="center">3.04</td>
+  <td align="center">1.53</td>
+  <td align="center">1.44</td>
+  <td align="center">1.40</td>
+  <td align="center">1.37</td>
+  <td align="center">1.35</td>
+</tr>
+<tr>
+  <td align="left">5 dB</td>
+  <td align="center">3.19</td>
+  <td align="center">1.64</td>
+  <td align="center">1.61</td>
+  <td align="center">1.53</td>
+  <td align="center">1.53</td>
+  <td align="center">1.50</td>
+</tr>
+<tr>
+  <td align="left">0 dB</td>
+  <td align="center">3.70</td>
+  <td align="center">1.78</td>
+  <td align="center">1.77</td>
+  <td align="center">1.66</td>
+  <td align="center">1.62</td>
+  <td align="center">1.61</td>
+</tr>
+</table>
+      </td>
+    <td>
+          <table>
+<tr>
+  <td align="left">SNR</td>
+  <td align="center">Q=0</td>
+  <td align="center">Q=1</td>
+  <td align="center">Q=2</td>
+  <td align="center">Q=3</td>
+  <td align="center">Q=4</td>
+  <td align="center">Q=5</td>
+</tr>
+<tr>
+   <td align="left">45 dB</td>
+  <td align="center">3.05</td>
+  <td align="center">1.49</td>
+  <td align="center">1.44</td>
+  <td align="center">1.40</td>
+  <td align="center">1.36</td>
+  <td align="center">1.32</td>
+</tr>
+<tr>
+  <td align="left">35 dB</td>
+  <td align="center">3.05</td>
+  <td align="center">1.49</td>
+  <td align="center">1.44</td>
+  <td align="center">1.40</td>
+  <td align="center">1.36</td>
+  <td align="center">1.32</td>
+</tr>
+<tr>
+  <td align="left">25 dB</td>
+  <td align="center">3.05</td>
+  <td align="center">1.50</td>
+  <td align="center">1.43</td>
+  <td align="center">1.40</td>
+  <td align="center">1.36</td>
+  <td align="center">1.33</td>
+</tr>
+<tr>
+  <td align="left">15 dB</td>
+  <td align="center">3.04</td>
+  <td align="center">1.53</td>
+  <td align="center">1.44</td>
+  <td align="center">1.40</td>
+  <td align="center">1.37</td>
+  <td align="center">1.35</td>
+</tr>
+<tr>
+  <td align="left">5 dB</td>
+  <td align="center">3.19</td>
+  <td align="center">1.64</td>
+  <td align="center">1.61</td>
+  <td align="center">1.53</td>
+  <td align="center">1.53</td>
+  <td align="center">1.50</td>
+</tr>
+<tr>
+  <td align="left">0 dB</td>
+  <td align="center">3.70</td>
+  <td align="center">1.78</td>
+  <td align="center">1.77</td>
+  <td align="center">1.66</td>
+  <td align="center">1.62</td>
+  <td align="center">1.61</td>
+</tr>
+</table>
+      </td>
+    </tr>
+  </table>
+    
+    
 
 ## Contributing Guideline
 We would like to thank the authors in these works [2-4] for sharing the source codes of these methods, which are publicly released at https://github.com/Prof-Boualem-Boashash/TFSAP-7.1-software-package, https://github.com/mokhtarmohammadi/Locally-Optimized-ADTFD and https://github.com/Jongchan/attention-module.
