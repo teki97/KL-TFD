@@ -1,5 +1,6 @@
 # Kernel Learning for High-Resolution Time-frequency Distribution
-We provide a pytorch implementation of the paper: Kernel Learning for High-Resolution Time-frequency Distribution [1], where a kernel learning based TFD model is proposed to gain high resolution and CT-free TFDs. The proposed model includes two kinds of multi-channel learning covolutional kernels stacked, that is, normal 2D Conv block and Skipping 2D Conv Block. Specifically, the former has large kernel size so that a smooth TFD can be attained while the latter has small kernel size with BAM [2] to improve resolution. Six pre-trained networks are provided (training signals at SNR = 10 dB), and they are corresponding to six cases of various Q (0, 1, 2, 3, 4, 5) which is the number of skipping 2D Conv Blocks. Additionally, we also train our network using synthetic data at SNR = 5 dB, and it is examined that performance with low SNR can be improved while weak energy parts are prone to be ignored.
+![](https://github.com/teki97/kernel-learning-time-frequency-distribution/blob/main/supplement.png)
+We provide a pytorch implementation of the paper: Kernel Learning for High-Resolution Time-Frequency Distribution [1], where a kernel learning based time-frequency distribution (TFD) model is proposed to gain high resolution and CT-free TFDs. As shown in the above figure, the proposed model includes **P** normal 2D Conv block and **Q** Skipping 2D Conv Block. Specifically, the former has large kernel size so that a smooth TFD can be attained while the latter has small kernel size with bottleneck attention module (BAM) [2] to improve resolution. 
 
 ## Preparation
 - python 3.6
@@ -8,8 +9,10 @@ We provide a pytorch implementation of the paper: Kernel Learning for High-Resol
 - cudNN 7.6.3.30
 
 ## Supplementary
-In this paper, we discuss the robustness of our proposed method, i.e., we have some experiments with the increase of Q, and it is examined that the performance can be improved by increasing Q. 
-The evaluation results measured by l1 distance for the first synthetic signal (two-component synthetic signal in our paper) are shown in the following table: 
+
+### Discussion on Q
+In this paper, we discuss the robustness of our proposed method, i.e., we have some experiments with the increase of Q, and it is examined that the performance can be improved by increasing Q. Six pre-trained networks are provided (training signals at SNR = **10 dB**), and they are corresponding to six cases of various Q (0, 1, 2, 3, 4, 5).
+The evaluation results measured by l1 distance for the two-component synthetic signal are shown in the following table: 
 <table>
 <tr>
   <td align="left">SNR</td>
@@ -79,7 +82,12 @@ The evaluation results measured by l1 distance for the first synthetic signal (t
 The visualized experimental results are supplemented as follows:  
 ![](https://github.com/teki97/kernel-learning-time-frequency-distribution/blob/main/supplemet_1.jpg)
 
-Then, when we train our network using signals at SNR = 5 dB, the evaluation results measured by l1 distance for the second synthetic signal (three-component synthetic signal in our paper) and the evaluation results measured by Renyi Entropy for the real-world bat echolocation signal are shown in the following tables:
+
+
+### Discussion on P
+
+### Discussion on training data
+Then, when we train our network using signals at SNR = 5 dB, and it is examined that performance with low SNR can be improved while weak energy parts are prone to be ignored. The evaluation results measured by l1 distance for the three-component synthetic signal and the evaluation results measured by Renyi Entropy for the real-world bat echolocation signal are shown in the following tables:
 <table>
   <tr>
     <td>
