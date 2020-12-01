@@ -220,7 +220,7 @@ Then, when we train our network using signals at SNR = 5 dB, the evaluation resu
   </table>
   
 The visualized experimental results are supplemented as follows:    
-![](https://github.com/teki97/kernel-learning-time-frequency-distribution/blob/main/supplemet_2.jpg)
+![](https://github.com/teki97/kernel-learning-time-frequency-distribution/blob/main/supplement_2.jpg)
 
 ## Contributing Guideline
 We would like to thank the authors in these works [2-4] for sharing the source codes of these methods, which are publicly released at https://github.com/Prof-Boualem-Boashash/TFSAP-7.1-software-package, https://github.com/mokhtarmohammadi/Locally-Optimized-ADTFD and https://github.com/Jongchan/attention-module.
