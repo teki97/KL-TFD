@@ -1,6 +1,8 @@
 # Kernel Learning for High-Resolution Time-frequency Distribution
 ![](https://github.com/teki97/kernel-learning-time-frequency-distribution/blob/main/supplement.png)
-We provide a pytorch implementation of the paper: Kernel Learning for High-Resolution Time-Frequency Distribution [1], where a kernel learning based time-frequency distribution (TFD) model is proposed to gain high resolution and CT-free TFDs. As shown in the above figure, the proposed model includes **P** normal 2D Conv block and **Q** Skipping 2D Conv Block. Specifically, the former has large kernel size so that a smooth TFD can be attained while the latter has small kernel size with bottleneck attention module (BAM) [2] to improve resolution. 
+We provide a pytorch implementation of the paper: Kernel Learning for High-Resolution Time-Frequency Distribution [1], where a kernel learning based time-frequency distribution (TFD) model is proposed to gain high resolution and CT-free TFDs. As shown in the above figure, the proposed model includes **N** Skipping Weighted Conv Modules. Specifically, several stacked multi-channel learning convolutional kernels to simulate adaptive directional filters while skipping operator is utilized to maintain correct information transmission. In addition, bottleneck attention module (BAM) [2] with groupnormalization is regarded as the weighted block to improve resolution. 
+
+All pre-trained network related to this paper are provided. The training code will be provided soon.
 
 ## Preparation
 - python 3.6
@@ -10,75 +12,81 @@ We provide a pytorch implementation of the paper: Kernel Learning for High-Resol
 
 ## Supplementary
 
-### Discussion on Q
-In this paper, we discuss the robustness of our proposed method, i.e., we have some experiments with the increase of Q, and it is examined that the performance can be improved by increasing Q. Six pre-trained networks are provided (training signals at SNR = **10 dB**), and they are corresponding to six cases of various Q (0, 1, 2, 3, 4, 5).
-The evaluation results measured by l1 distance for the two-component synthetic signal are shown in the following table: 
+### Discussion on Real-life Data
+In this paper, we discuss the robustness of our network on synthetic data. We also have some discussion on real-life data corresponding to various **N** (4, 6, 8, 10, 12, 14, 16). Seven pre-trained networks are provided (training signals at SNR = **10 dB**).
+The evaluation results measured by Renyi Entropy for the real-life bat echolocation signal are shown in the following table: 
 <table>
 <tr>
   <td align="left">SNR</td>
-  <td align="center">Q=0</td>
-  <td align="center">Q=1</td>
-  <td align="center">Q=2</td>
-  <td align="center">Q=3</td>
-  <td align="center">Q=4</td>
-  <td align="center">Q=5</td>
+  <td align="center">N=4</td>
+  <td align="center">N=6</td>
+  <td align="center">N=8</td>
+  <td align="center">N=10</td>
+  <td align="center">N=12</td>
+  <td align="center">N=14</td>
+  <td align="center">N=16</td>
 </tr>
 <tr>
-   <td align="left">45 dB</td>
-  <td align="center">3.05</td>
-  <td align="center">1.49</td>
-  <td align="center">1.44</td>
-  <td align="center">1.40</td>
-  <td align="center">1.36</td>
-  <td align="center">1.32</td>
+  <td align="left">45 dB</td>
+  <td align="center">10.67</td>
+  <td align="center">10.00</td>
+  <td align="center">9.64</td>
+  <td align="center">9.60</td>
+  <td align="center">9.60</td>
+  <td align="center">9.86</td>
+  <td align="center">9.74</td>
 </tr>
 <tr>
-  <td align="left">35 dB</td>
-  <td align="center">3.05</td>
-  <td align="center">1.49</td>
-  <td align="center">1.44</td>
-  <td align="center">1.40</td>
-  <td align="center">1.36</td>
-  <td align="center">1.32</td>
+  <td align="center">10.67</td>
+  <td align="center">10.00</td>
+  <td align="center">9.64</td>
+  <td align="center">9.60</td>
+  <td align="center">9.60</td>
+  <td align="center">9.86</td>
+  <td align="center">9.74</td>
 </tr>
 <tr>
   <td align="left">25 dB</td>
-  <td align="center">3.05</td>
-  <td align="center">1.50</td>
-  <td align="center">1.43</td>
-  <td align="center">1.40</td>
-  <td align="center">1.36</td>
-  <td align="center">1.33</td>
+  <td align="center">10.64</td>
+  <td align="center">10.00</td>
+  <td align="center">9.64</td>
+  <td align="center">9.60</td>
+  <td align="center">9.60</td>
+  <td align="center">9.87</td>
+  <td align="center">9.75</td>
 </tr>
 <tr>
   <td align="left">15 dB</td>
-  <td align="center">3.04</td>
-  <td align="center">1.53</td>
-  <td align="center">1.44</td>
-  <td align="center">1.40</td>
-  <td align="center">1.37</td>
-  <td align="center">1.35</td>
+  <td align="center">10.50</td>
+  <td align="center">10.02</td>
+  <td align="center">9.67</td>
+  <td align="center">9.66</td>
+  <td align="center">9.66</td>
+  <td align="center">9.92</td>
+  <td align="center">9.78</td>
 </tr>
 <tr>
   <td align="left">5 dB</td>
-  <td align="center">3.19</td>
-  <td align="center">1.64</td>
-  <td align="center">1.61</td>
-  <td align="center">1.53</td>
-  <td align="center">1.53</td>
-  <td align="center">1.50</td>
+  <td align="center">10.48</td>
+  <td align="center">10.27</td>
+  <td align="center">9.96</td>
+  <td align="center">10.17</td>
+  <td align="center">10.11</td>
+  <td align="center">10.21</td>
+  <td align="center">10.10</td>
 </tr>
 <tr>
   <td align="left">0 dB</td>
-  <td align="center">3.70</td>
-  <td align="center">1.78</td>
-  <td align="center">1.77</td>
-  <td align="center">1.66</td>
-  <td align="center">1.62</td>
-  <td align="center">1.61</td>
+  <td align="center">11.11</td>
+  <td align="center">10.77</td>
+  <td align="center">10.47</td>
+  <td align="center">10.90</td>
+  <td align="center">10.72</td>
+  <td align="center">10.75</td>
+  <td align="center">10.55</td>
 </tr>
 </table>
-
+It is noted that the network with **N = 24** has the best performance on the real-life data, which is different from the result on the synthetic data. The reason behind this issue is that overfitting give rise to while increasing N. Thus, for reducing parameters and obtaining great performance, we choose to set **N = 10**.
 The visualized experimental results are supplemented as follows:  
 ![](https://github.com/teki97/kernel-learning-time-frequency-distribution/blob/main/supplemet_1.jpg)
 
