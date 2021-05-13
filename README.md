@@ -37,6 +37,7 @@ The evaluation results measured by Renyi Entropy for the real-life bat echolocat
   <td align="center">9.74</td>
 </tr>
 <tr>
+  <td align="left">35 dB</td>
   <td align="center">10.67</td>
   <td align="center">10.00</td>
   <td align="center">9.64</td>
