@@ -88,7 +88,7 @@ The evaluation results measured by Renyi Entropy for the real-life bat echolocat
 </tr>
 </table>
 It is noted that the network with N=24 has the best performance on the real-life data, which is different from the result on the synthetic data. The reason behind this issue is that overfitting give rise to while increasing N. Thus, for reducing parameters and obtaining great performance, we choose to set N=10.
-The visualized experimental results are supplemented as follows:　　
+The visualized experimental results are supplemented as follows:  
 ![](https://github.com/teki97/kernel-learning-time-frequency-distribution/blob/main/supplement_1.jpg)
 
 
