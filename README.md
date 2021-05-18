@@ -1,5 +1,5 @@
 # Kernel Learning for High-Resolution Time-frequency Distribution
-![](https://github.com/teki97/kernel-learning-time-frequency-distribution/blob/main/supplement.png)
+![](https://github.com/teki97/kernel-learning-time-frequency-distribution/blob/main/supplement1.png)
 We provide a pytorch implementation of the paper: Kernel Learning for High-Resolution Time-Frequency Distribution [1], where a kernel learning based time-frequency distribution (TFD) model is proposed to gain high resolution and CT-free TFDs. As shown in the above figure, the proposed model includes **N** Skipping Weighted Conv Modules. Specifically, several stacked multi-channel learning convolutional kernels to simulate adaptive directional filters while skipping operator is utilized to maintain correct information transmission. In addition, bottleneck attention module (BAM) [2] with groupnormalization is regarded as the weighted block to improve resolution. 
 
 All pre-trained network related to this paper are provided. The training code will be provided soon.
@@ -87,9 +87,9 @@ The evaluation results measured by Renyi Entropy for the real-life bat echolocat
   <td align="center">10.55</td>
 </tr>
 </table>
-![](https://github.com/teki97/kernel-learning-time-frequency-distribution/blob/main/supplement_1.jpg)
 It is noted that the network with N=12 has the best performance on the real-life data, which is different from the result on the synthetic data. The reason behind this issue is that overfitting give rise to while increasing N. Thus, for reducing parameters and obtaining great performance, we choose to set N=10.
 The visualized experimental results are supplemented as follows:  
+![](https://github.com/teki97/kernel-learning-time-frequency-distribution/blob/main/supplement_1.png)
 
 
 ## Contributing Guideline
