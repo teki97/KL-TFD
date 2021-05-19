@@ -10,10 +10,15 @@ All pre-trained network related to this paper are provided. The training code wi
 - cuda 9.0
 - cudNN 7.6.3.30
 
+## Training Dataset
+Our training dataset includes two or three randomly spectrally-overlapped (only one intersection) linear frequencymodulated (LFM) and sinusoidal frequency-modulated (SFM) components with amplitude modulation (AM) at a fixed SNR = **10 dB**. In particular, two-component synthetic data is composed of a LFM and a SFM, and three-component synthetic data is composed of two LFMs and a SFM with only one intersection between a LFM and a SFM. Each epoch randomly generates batchsize=16 synthetic signals for training by changing the slope of the LFM signal and the smallest and normalized frequencies of the SFM signal. The proportion for two and three-component signals is 50% and 50%. Test synthetic signals in this paper is not in our training dataset.  
+
+For the specific application, you'd better make the synthetic data in the training dataset fit to the real-life signals to get a satisfactory performance.
+
 ## Supplementary
 
 ### Discussion on Real-life Data
-In this paper, we discuss the robustness of our network on synthetic data. We also have some discussion on real-life data corresponding to various **N** (4, 6, 8, 10, 12, 14, 16). Seven pre-trained networks are provided (training signals at SNR = **10 dB**).
+In this paper, we discuss the robustness of our network on synthetic data. We also have some discussion on real-life data corresponding to various **N** (4, 6, 8, 10, 12, 14, 16). Seven pre-trained networks are provided.
 The evaluation results measured by Renyi Entropy for the real-life bat echolocation signal are shown in the following table: 
 <table>
 <tr>
