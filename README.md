@@ -101,7 +101,7 @@ We would like to thank the authors in these works [2-5] for sharing the source c
 ## Reference
 [1] Jiang, Lei, et al. "Kernel Learning for High-Resolution Time-Frequency Distribution." arXiv preprint arXiv:2007.00322 (2020).  
 [2] Park, Jongchan, et al. "Bam: Bottleneck attention module." arXiv preprint arXiv:1807.06514 (2018).  
-[3] Park, Jongchan, et al. "A Simple and Light-Weight Attention Module for Convolutional Neural Networks." Int J Comput Vis 128, 783–798 (2020).
+[3] Park, Jongchan, et al. "A Simple and Light-Weight Attention Module for Convolutional Neural Networks." Int J Comput Vis 128, 783–798 (2020).  
 [4] Boashash, Boualem, and Samir Ouelha. "Designing high-resolution time–frequency and time–scale distributions for the analysis and classification of non-stationary signals: a tutorial review with a comparison of features performance." Digital Signal Processing 77 (2018): 120-152.  
 [5] Mohammadi, Mokhtar, et al. "Locally optimized adaptive directional time–frequency distributions." Circuits, Systems, and Signal Processing 37.8 (2018): 3154-3174.  
 ## Contact
