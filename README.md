@@ -1,6 +1,6 @@
 # Kernel Learning for High-Resolution Time-frequency Distribution
 ![](https://github.com/teki97/KL-TFD/blob/main/supplement1.png)
-We provide a pytorch implementation of the paper: Kernel Learning for High-Resolution Time-Frequency Distribution [1], where a KL-TFD model is proposed to gain high resolution and CT-free TFDs. As shown in the above figure, the proposed model includes **N** Skipping Weighted Conv Modules. Specifically, several stacked multi-channel learning convolutional kernels to simulate adaptive directional filters while a skipping operator is utilized to maintain correct information transmission. In addition, bottleneck attention module (BAM) [2, 3] with groupnormalization is regarded as the weighted block to improve resolution.  
+We provide a pytorch implementation of the paper: Kernel Learning for High-Resolution Time-Frequency Distribution [1], where a kernel learning time-frequency distribution (KL-TFD) model is proposed to gain high resolution and cross-term (CT) free TFDs. As shown in the above figure, the proposed model includes **N** Skipping Weighted Conv Modules. Specifically, several stacked multi-channel learning convolutional kernels to simulate traditional kernel functions while a skipping operator is utilized to maintain correct information transmission. In addition, bottleneck attention module (BAM) [2, 3] with groupnormalization is regarded as the weighted block to improve performance.  
 All pre-trained networks related to this paper are provided in **master** branch.
 
 ## Preparation
@@ -16,18 +16,18 @@ For the specific application, you'd better make the synthetic signals in the tra
 ## Supplementary
 
 ### Discussion on Real-life Data
-In this paper, we discuss the robustness of our network on synthetic data. We also have some discussion on real-life data corresponding to various **N** (4, 6, 8, 10, 12, 14, 16). Seven pre-trained networks are provided.
+In this paper, we discuss the robustness of our network on synthetic data. We also have some discussion on real-life data corresponding to various **N** (3, 5, 7, 9, 11, 13, 15). Seven pre-trained networks are provided.
 The evaluation results measured by Renyi Entropy for the real-life bat echolocation signal are shown in the following table: 
 <table>
 <tr>
   <td align="left">SNR</td>
-  <td align="center">N=4</td>
-  <td align="center">N=6</td>
-  <td align="center">N=8</td>
-  <td align="center">N=10</td>
-  <td align="center">N=12</td>
-  <td align="center">N=14</td>
-  <td align="center">N=16</td>
+  <td align="center">N=3</td>
+  <td align="center">N=5</td>
+  <td align="center">N=7</td>
+  <td align="center">N=9</td>
+  <td align="center">N=11</td>
+  <td align="center">N=13</td>
+  <td align="center">N=15</td>
 </tr>
 <tr>
   <td align="left">45 dB</td>
@@ -90,7 +90,7 @@ The evaluation results measured by Renyi Entropy for the real-life bat echolocat
   <td align="center">10.55</td>
 </tr>
 </table>
-It is noted that the network with N=12 has the best performance on the real-life data, which is different from the result on the synthetic data. The reason behind this issue is that overfitting give rise to while increasing N. Thus, for reducing parameters and obtaining great performance, we choose to set N=10.
+It is noted that the network with N=11 has the best performance on the real-life data, which is different from the result on the synthetic data. The reason behind this issue is that overfitting give rise to while increasing N. Thus, for reducing parameters and obtaining great performance, we choose to set N=9.
 The visualized experimental results are supplemented as follows:  
 
 ![](https://github.com/teki97/KL-TFD/blob/main/supplement.png)
