@@ -1,5 +1,5 @@
 # Kernel Learning for High-Resolution Time-frequency Distribution
-![](https://github.com/teki97/KL-TFD/blob/main/supplement1.png)
+![](https://github.com/teki97/KL-TFD/blob/main/supplement.png)
 We provide a pytorch implementation of the paper: Kernel Learning for High-Resolution Time-Frequency Distribution [1], where a kernel learning time-frequency distribution (KL-TFD) model is proposed to gain high resolution and cross-term (CT) free TFDs. As shown in the above figure, the proposed model includes **N** Skipping Weighted Conv Modules. Specifically, several stacked multi-channel learning convolutional kernels to simulate traditional kernel functions while a skipping operator is utilized to maintain correct information transmission. In addition, bottleneck attention module (BAM) [2, 3] with groupnormalization is regarded as the weighted block to improve performance.  
 All pre-trained networks related to this paper are provided in **master** branch.
 
